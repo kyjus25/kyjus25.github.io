@@ -1,0 +1,18 @@
+<section class="projects section">
+  <div class="section-inner">
+    <h2 class="heading">Latest GitHub Projects</h2>
+    <div class="content">
+      <div id="gihub-feed" *ngIf="repos">
+        <div class="item" *ngFor="let repo of repos">
+          <h3 class="title">
+            <a href="{{repo['html_url']}}">{{repo.name}}</a>&nbsp;
+            <span class="badge badge-theme" *ngIf="repo.language !== 'null'">{{repo.language}}</span>
+          </h3>
+          <p class="summary">{{repo.description }}</p>
+          <p><a class="more-link" href="{{repo['html_url']}}" target="_blank"><i class="fas fa-external-link-alt"></i>View Repository</a></p>
+        </div>
+      </div>
+      <a class="btn btn-cta-secondary" target="_blank" href="https://github.com/kyjus25">View my GitHub <i class="fas fa-chevron-right"></i></a>
+    </div>
+  </div>
+</section>
